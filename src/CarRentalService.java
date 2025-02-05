@@ -70,6 +70,17 @@ public class CarRentalService {
                 System.out.println("Rental Days: " + days);
                 System.out.println("Total Price: " + selectedCar.calculatePrice(days));
 
+                System.out.println("Confirm rental (Y/N: " );
+                String confirmation = sc.next();
+
+                if (confirmation.equalsIgnoreCase("Y")){
+                    //Book a Car
+
+                } else{
+                    System.out.println("Car booking is cancelled");
+                }
+
+
 
             }
         }
