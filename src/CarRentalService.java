@@ -32,10 +32,13 @@ public class CarRentalService {
             if(userChoice == 1){
                 System.out.println("==  For renting a car, please provide below details ==");
                 System.out.println(" Enter your name: ");
-
                 String customerName = sc.nextLine();
+
                 System.out.println("Enter the Car ID you want to rent: ");
                 String carID = sc.nextLine();
+
+                System.out.println("Enter the number of days for rental");
+                int days = sc.nextInt();
 
             }
 
