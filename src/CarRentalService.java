@@ -54,12 +54,13 @@ public class CarRentalService {
                         .filter(c -> c.getCarID().equalsIgnoreCase(carID) && c.getNoOfAvailableCars() > 0)
                         .findAny();
 
+                        if(optionalCar.isEmpty()){
+                            System.out.println("Car is not available");
+                            options();
+                            return;
+                        }
+
             }
-
-            
-
-
-
         }
     }
 }
