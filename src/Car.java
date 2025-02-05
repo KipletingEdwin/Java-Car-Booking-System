@@ -39,11 +39,18 @@ public class Car {
     }
 
     public double getPricePerDay() {
+
         return pricePerDay;
     }
 
     public int getNoOfAvailableCars() {
+
         return noOfAvailableCars;
+    }
+
+    public  double calculatePrice(int days){
+        return  pricePerDay * days;
+
     }
 
     // Constructor

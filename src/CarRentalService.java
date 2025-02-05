@@ -55,10 +55,21 @@ public class CarRentalService {
                         .findAny();
 
                         if(optionalCar.isEmpty()){
-                            System.out.println("Car is not available");
+                            System.out.println("Car is not available. Please try to book another car");
                             options();
                             return;
                         }
+
+                        Car selectedCar = optionalCar.get();
+
+                System.out.println("=== Bill Receipt ==");
+                System.out.println("Customer Name: " + customer.getName());
+                System.out.println("Customer ID: " + customer.getId());
+                System.out.println("Car Brand: " + selectedCar.getBrand() + "Model: " + selectedCar.getModel());
+
+                System.out.println("Rental Days: " + days);
+                System.out.println("Total Price: " + selectedCar.calculatePrice(days));
+
 
             }
         }
