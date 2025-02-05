@@ -16,6 +16,10 @@ public class CarRentalService {
         cars.add(car);
     }
 
+    public void addCustomer(Customer cust){
+        customers.add(cust);
+    }
+
     public  void  options(){
         Scanner sc = new Scanner(System.in);
 
@@ -43,6 +47,7 @@ public class CarRentalService {
                 int days = sc.nextInt();
 
                 Customer customer = new Customer("CUSTOMER-" + (customers.size() + 1), customerName);
+                addCustomer(customer);
 
             }
 
