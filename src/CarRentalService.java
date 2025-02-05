@@ -5,9 +5,11 @@ import java.util.Scanner;
 public class CarRentalService {
 
     private List<Car> cars;
+    private  List<Customer> customers;
 
     public CarRentalService() {
         cars = new ArrayList<>();
+        customers = new ArrayList<>();
     }
 
     public  void  addCars(Car car){
@@ -39,6 +41,8 @@ public class CarRentalService {
 
                 System.out.println("Enter the number of days for rental");
                 int days = sc.nextInt();
+
+                Customer customer = new Customer("CUSTOMER-" + (customers.size() + 1), customerName);
 
             }
 
