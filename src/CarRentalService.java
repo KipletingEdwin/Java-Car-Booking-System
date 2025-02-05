@@ -13,6 +13,10 @@ public class CarRentalService {
         customers = new ArrayList<>();
     }
 
+    public  void  bookedCar(){
+
+    }
+
     public  void  addCars(Car car){
         cars.add(car);
     }
