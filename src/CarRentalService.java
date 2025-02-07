@@ -105,8 +105,9 @@ public class CarRentalService {
                     System.out.println("Please provide valid car details");
                     options();
                     return;
-
                 }
+                Car carToReturn = optionalCar.get();
+
             }
         }
     }
