@@ -7,21 +7,22 @@ public class CarRentalService {
 
     private List<Car> cars;
     private  List<Customer> customers;
-    private  List<BookedCarInformation> bookedCarInformation;
+    private  List<BookedCarInformation> bookedCarInformations;
 
 
     public CarRentalService() {
         cars = new ArrayList<>();
         customers = new ArrayList<>();
-        bookedCarInformation = new ArrayList<>();
+        bookedCarInformations = new ArrayList<>();
     }
 
     public  void  bookedCar(Car car, Customer customer, int days){
         if(car.getNoOfAvailableCars() > 0 ){
             car.setNoOfAvailableCars(car.getNoOfAvailableCars() - 1);
-            bookedCarInformation.add(new BookedCarInformation(car, customer, days));
-        }
+            bookedCarInformations.add(new BookedCarInformation(car, customer, days));
+        } else {
 
+        }
     }
 
     public  void  addCars(Car car){
