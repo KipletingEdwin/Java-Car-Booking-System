@@ -13,7 +13,10 @@ public class CarRentalService {
         customers = new ArrayList<>();
     }
 
-    public  void  bookedCar(){
+    public  void  bookedCar(Car car, Customer customer, int days){
+        if(car.getNoOfAvailableCars() > 0 ){
+            car.setNoOfAvailableCars(car.getNoOfAvailableCars() - 1);
+        }
 
     }
 
