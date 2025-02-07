@@ -72,7 +72,6 @@ public class CarRentalService {
                             options();
                             return;
                         }
-
                         Car selectedCar = optionalCar.get();
 
                 System.out.println("=== Bill Receipt ==");
@@ -90,10 +89,12 @@ public class CarRentalService {
                     //Book a Car
                     bookedCar(selectedCar, customer, days);
                     System.out.println("Car booking is successful");
-
                 } else{
                     System.out.println("Car booking is cancelled");
                 }
+            } else if (choice == 2) {
+
+
             }
         }
     }
