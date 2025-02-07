@@ -7,11 +7,13 @@ public class CarRentalService {
 
     private List<Car> cars;
     private  List<Customer> customers;
+    private  List<BookedCarInformation> bookedCarInformation;
 
 
     public CarRentalService() {
         cars = new ArrayList<>();
         customers = new ArrayList<>();
+        bookedCarInformation = new ArrayList<>();
     }
 
     public  void  bookedCar(Car car, Customer customer, int days){
