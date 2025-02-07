@@ -95,6 +95,7 @@ public class CarRentalService {
             } else if (userChoice == 2) {
                 System.out.println("== Return a Car ==");
                 System.out.println("Enter the car ID you want to return: ");
+                String carID = sc.nextLine();
 
 
             }
