@@ -97,7 +97,7 @@ public class CarRentalService {
                 System.out.println("Enter the car ID you want to return: ");
                 String carID = sc.nextLine();
 
-
+                Optional<Car> optionalCar = cars.stream()
             }
         }
     }
