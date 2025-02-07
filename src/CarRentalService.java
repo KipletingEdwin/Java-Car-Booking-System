@@ -21,6 +21,7 @@ public class CarRentalService {
             car.setNoOfAvailableCars(car.getNoOfAvailableCars() - 1);
             bookedCarInformations.add(new BookedCarInformation(car, customer, days));
         } else {
+            System.out.println("Car is not available for rent");
 
         }
     }
