@@ -8,6 +8,7 @@ public class CarRentalService {
     private List<Car> cars;
     private  List<Customer> customers;
 
+
     public CarRentalService() {
         cars = new ArrayList<>();
         customers = new ArrayList<>();
@@ -16,6 +17,7 @@ public class CarRentalService {
     public  void  bookedCar(Car car, Customer customer, int days){
         if(car.getNoOfAvailableCars() > 0 ){
             car.setNoOfAvailableCars(car.getNoOfAvailableCars() - 1);
+            bookedCarInformation.add(new BookedCarInformation(car, customer, days));
         }
 
     }
