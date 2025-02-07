@@ -100,6 +100,13 @@ public class CarRentalService {
                 Optional<Car> optionalCar = cars.stream()
                         .filter(c -> c.getCarID().equals(carID))
                         .findAny();
+
+                if(optionalCar.isEmpty()){
+                    System.out.println("Please provide valid car details");
+                    options();
+                    return;
+
+                }
             }
         }
     }
