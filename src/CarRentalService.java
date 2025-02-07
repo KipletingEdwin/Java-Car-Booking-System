@@ -88,14 +88,12 @@ public class CarRentalService {
 
                 if (confirmation.equalsIgnoreCase("Y")){
                     //Book a Car
+                    bookedCar(selectedCar, customer, days);
                     System.out.println("Car booking is successful");
 
                 } else{
                     System.out.println("Car booking is cancelled");
                 }
-
-
-
             }
         }
     }
