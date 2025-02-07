@@ -108,6 +108,10 @@ public class CarRentalService {
                 }
                 Car carToReturn = optionalCar.get();
 
+                bookedCarInformations.stream()
+                        .filter(b -> b.getCar() == carToReturn).findFirst()
+                        .orElse(null);
+
             }
         }
     }
