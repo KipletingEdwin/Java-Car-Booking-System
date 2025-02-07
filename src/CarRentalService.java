@@ -98,6 +98,8 @@ public class CarRentalService {
                 String carID = sc.nextLine();
 
                 Optional<Car> optionalCar = cars.stream()
+                        .filter(c -> c.getCarID().equals(carID))
+                        .findAny();
             }
         }
     }
