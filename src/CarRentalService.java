@@ -134,6 +134,9 @@ public class CarRentalService {
                 cars.stream()
                         .filter(c -> c.getNoOfAvailableCars() > 0)
                         .forEach(car -> System.out.println(car.getCarID() + " - " + car.getBrand() + " " + car.getModel() + " " + car.getNoOfAvailableCars()));
+            } else if (userChoice == 4) {
+                System.out.println("Thank you for choosing us");
+                break;
             }
         }
     }
