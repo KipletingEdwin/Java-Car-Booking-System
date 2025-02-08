@@ -26,8 +26,9 @@ public class CarRentalService {
         }
     }
 
-    public  void  returnCar(Car car){
+    public  void  returnCar(Car car, BookedCarInformation bookedCarInformation){
         car.setNoOfAvailableCars(car.getNoOfAvailableCars() + 1);
+        bookedCarInformations.remove(bookedCarInformation);
 
     }
 
@@ -124,6 +125,8 @@ public class CarRentalService {
                 }
 
                 Customer cust = bookedCarInformation.getCustomer();
+
+                returnCar(carToReturn, bookedCarInformation);
 
                 System.out.println("Car returned successfully by " + cust.getName());
 
