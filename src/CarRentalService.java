@@ -112,6 +112,12 @@ public class CarRentalService {
                         .filter(b -> b.getCar() == carToReturn).findFirst()
                         .orElse(null);
 
+                if(bookedCarInformation == null){
+                    System.out.println("Car information not available. Please provide valid details");
+                    options();
+                    return;
+                }
+
             }
         }
     }
