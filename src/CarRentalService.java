@@ -26,6 +26,11 @@ public class CarRentalService {
         }
     }
 
+    public  void  returnCar(Car car){
+        car.setNoOfAvailableCars(car.getNoOfAvailableCars() + 1);
+
+    }
+
     public  void  addCars(Car car){
         cars.add(car);
     }
