@@ -118,6 +118,10 @@ public class CarRentalService {
                     return;
                 }
 
+                Customer cust = bookedCarInformation.getCustomer();
+
+
+
             }
         }
     }
