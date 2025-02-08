@@ -137,6 +137,8 @@ public class CarRentalService {
             } else if (userChoice == 4) {
                 System.out.println("Thank you for choosing us");
                 break;
+            } else {
+                System.out.println("Please provide valid options");
             }
         }
     }
