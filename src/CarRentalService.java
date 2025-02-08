@@ -120,6 +120,8 @@ public class CarRentalService {
 
                 Customer cust = bookedCarInformation.getCustomer();
 
+                System.out.println("Car returned successfully by " + cust.getName());
+
 
 
             }
