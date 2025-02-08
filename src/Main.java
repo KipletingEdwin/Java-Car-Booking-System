@@ -29,6 +29,8 @@ public class Main {
         carRentalService.addCars(toyotaCar);
         carRentalService.addCars(nissanCar);
 
+        carRentalService.options();
+
 
 
     }

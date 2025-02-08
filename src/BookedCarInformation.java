@@ -1,8 +1,13 @@
 public class BookedCarInformation {
+    private Car car;
+    private Customer customer;
+    private int days;
 
-    private  Customer customer;
-    private  Car car;
-    private  int days;
+    public BookedCarInformation(Car car, Customer customer, int days) {
+        this.car = car;
+        this.customer = customer;
+        this.days = days;
+    }
 
     public Customer getCustomer() {
         return customer;
@@ -16,10 +21,12 @@ public class BookedCarInformation {
         return days;
     }
 
-    public BookedCarInformation(Customer customer, Car car, int days) {
-        this.customer = customer;
-        this.car = car;
-        this.days = days;
+    @Override
+    public String toString() {
+        return "BookedCarInformation{" +
+                "Car='" + car.getBrand() + " " + car.getModel() + '\'' +
+                ", Customer='" + customer.getName() + '\'' +
+                ", Days=" + days +
+                '}';
     }
-
 }

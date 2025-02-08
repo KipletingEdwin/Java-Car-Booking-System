@@ -1,11 +1,45 @@
 public class Car {
 
-    private  String model;
-    private  String brand;
-    private  String carID;
-    private  double pricePerDay;
-    private  int noOfAvailableCars;
+    private String model;
+    private String brand;
+    private String carID;
+    private double pricePerDay;
+    private int noOfAvailableCars;
 
+    // Default Constructor
+    public Car() {}
+
+    // Parameterized Constructor
+    public Car(String model, String brand, String carID, double pricePerDay, int noOfAvailableCars) {
+        this.model = model;
+        this.brand = brand;
+        this.carID = carID;
+        this.pricePerDay = pricePerDay;
+        this.noOfAvailableCars = noOfAvailableCars;
+    }
+
+    // Getters
+    public String getModel() {
+        return model;
+    }
+
+    public String getBrand() {
+        return brand;
+    }
+
+    public String getCarID() {
+        return carID;
+    }
+
+    public double getPricePerDay() {
+        return pricePerDay;
+    }
+
+    public int getNoOfAvailableCars() {
+        return noOfAvailableCars;
+    }
+
+    // Setters
     public void setModel(String model) {
         this.model = model;
     }
@@ -26,37 +60,20 @@ public class Car {
         this.noOfAvailableCars = noOfAvailableCars;
     }
 
-    public String getModel() {
-        return model;
+    // Calculate total rental price
+    public double calculatePrice(int days) {
+        return pricePerDay * days;
     }
 
-    public String getBrand() {
-        return brand;
+    // toString() method for easy debugging
+    @Override
+    public String toString() {
+        return "Car{" +
+                "model='" + model + '\'' +
+                ", brand='" + brand + '\'' +
+                ", carID='" + carID + '\'' +
+                ", pricePerDay=" + pricePerDay +
+                ", noOfAvailableCars=" + noOfAvailableCars +
+                '}';
     }
-
-    public String getCarID() {
-        return carID;
-    }
-
-    public double getPricePerDay() {
-
-        return pricePerDay;
-    }
-
-    public int getNoOfAvailableCars() {
-
-        return noOfAvailableCars;
-    }
-
-    public  double calculatePrice(int days){
-        return  pricePerDay * days;
-
-    }
-
-    // Constructor
-    public Car() {
-
-    }
-
-
 }
