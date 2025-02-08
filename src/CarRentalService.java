@@ -127,10 +127,9 @@ public class CarRentalService {
                 Customer cust = bookedCarInformation.getCustomer();
 
                 returnCar(carToReturn, bookedCarInformation);
-
                 System.out.println("Car returned successfully by " + cust.getName());
-
-
+            } else if (userChoice == 3) {
+                System.out.println("== Available Cars ==");
 
             }
         }
